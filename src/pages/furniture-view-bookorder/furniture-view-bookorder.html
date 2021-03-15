@@ -1,0 +1,81 @@
+<!--
+  Generated template for the FurnitureViewBookorderPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title class="FotnStyle">Orders</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<!-- <ion-content style="background: url('assets/imgs/back.png');  background-position: center center;
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;
+background-color: #464646;" > -->
+
+<ion-content class="backgroundColor">
+  <form>
+    <div class="form-group">
+      <!-- <input type="text" placeholder="Search ..." class="form-control" (input)="SearchOrder()" id="usr"> -->
+
+      <ion-searchbar class="FotnStyle" name="Search" [(ngModel)]="myInput" [animated]="true" [autocorrect]="on"
+        [autocomplete]="on" [showCancelButton]="true" (ionInput)="onInput($event)" (ionCancel)="onCancelInput($event)">
+      </ion-searchbar>
+
+    </div>
+  </form>
+  <div style="width: 90%">
+    <ion-item style="border-radius: 5px; margin-left:6%; margin-right:10%; margin-top: 5%; background: white;">
+      <ion-label style="color:grey; font-size: 15px" class="FotnStyle">Filter Orders</ion-label>
+      <ion-option *ngFor="let CatName of CategoryName" [value]="CatName.CategoryName"> {{CatName.CategoryName}}
+      </ion-option>
+      <ion-select [(ngModel)]="filter" (ionChange)="onChangeFilter(filter)">
+        <ion-option class="FotnStyle">All orders</ion-option>
+        <ion-option class="FotnStyle">Booked Orders</ion-option>
+        <ion-option class="FotnStyle">Confirm Orders</ion-option>
+        <ion-option class="FotnStyle">Deliver Orders</ion-option>
+        <ion-option class="FotnStyle">Return / Complete Order</ion-option>
+        <ion-option class="FotnStyle">Cancel Orders</ion-option>
+      </ion-select>
+    </ion-item>
+  </div>
+  <ng-container *ngIf="!IsSearch">
+    <ion-card style="opacity: 0.8" *ngFor="let loop of ShwoOrderArray">
+
+      <ion-card-content style="background-color: white"
+        (click)="OrderDeatils(loop.OrderDetails , loop.isStatus , loop.ID)">
+
+        <h2 class="FotnStyle" style="font-size: 20px">Order Status : {{(loop.IsCencle == 0 && loop.isBooked == 1 && loop.IsDeliver == 1 && loop.Return == 1)? 'Order Completed'
+          : (loop.IsCencle == 0 && loop.isBooked == 1 && loop.IsDeliver == 1 && loop.Return == 0) ? 'Deliver' : (loop.IsCencle
+          == 0 && loop.isBooked == 1 && loop.IsDeliver == 0 && loop.Return == 0) ? 'Confirm' : (loop.IsCencle == 0 && loop.isBooked
+          == 0 && loop.IsDeliver == 0 && loop.Return == 0) ? 'Booked Orders' : (loop.IsCencle == 1) ? 'Cancel' : ''}}
+        </h2>
+        <hr>
+        <h3 class="FotnStyle" style="color: grey">
+          <b>Order ID : {{loop.OrderID}}</b>
+        </h3>
+        <p class="FotnStyle" style="color: grey">Name : {{loop.Name}}</p>
+        <p class="FotnStyle" style="color: grey">Number : {{loop.Number}}</p>
+        <!-- <p style="color: lightgray">City : {{loop.City}}</p>
+      <p style="color: lightgray">Postal Code : {{loop.PostalCode}}</p> -->
+        <p class="FotnStyle" style="color: grey">Adress : {{loop.Adress}}</p>
+        <p class="FotnStyle" style="color: grey">Amount : {{loop.NetAmount * loop.NoOfDays}}</p>
+
+
+      </ion-card-content>
+
+
+    </ion-card>
+  </ng-container>
+
+  <ng-container *ngIf="IsSearch">
+    <br />
+    <p class="FotnStyle" style="font-weight: bold;text-align: center;"> No Order Found against this ID</p>
+  </ng-container>
+</ion-content>

@@ -1,0 +1,65 @@
+<ion-menu [content]="content" side="right" persistent="true">
+    <ion-content>
+
+        <div class="BoxColor" style="height:200px;color:white;padding-left:10%;">
+
+            <img style=" width: 35%;margin-top: 9%;" src="assets/imgs/profile.png" />
+            <p>
+                <span>Welcom</span>
+                <br>
+                <!-- <span class="FotnStyle" (click)="Logout()" *ngIf="ObjGeneralHelper.IsLoggedID">Logout</span> -->
+                <span class="FotnStyle" (click)="SignIn()" *ngIf="!ObjGeneralHelper.IsLoggedID">Login /</span>
+                <span class="FotnStyle" (click)="SignUp()" *ngIf="!ObjGeneralHelper.IsLoggedID">SignUp</span>
+                <!-- <span class="FotnStyle" (click)="Logout()" *ngIf="ObjGeneralHelper.IsLoggedID">{{ObjGeneralHelper.UserInfo.LogInID}}</span> -->
+                <span class="FotnStyle" (click)="Logout()" *ngIf="ObjGeneralHelper.IsLoggedID">Log Out</span>
+            </p>
+        </div>
+        <ion-list>
+
+
+            <!-- <div style="border-top: 1px solid lightgrey; height: 3px; width: 100%; opacity: 0.5"></div> -->
+
+            <ion-list *ngFor="let p of Categoryarray;let i2=index" id="Items">
+
+                <ion-item no-lines *ngIf="p.CategoryName != 'Props' && p.isActive" style="margin-left: 5%"
+                    (click)="openPage(p)">
+                    <ion-avatar item-start>
+                        <img src="{{p.CategoryImage}}" width="50%">
+                    </ion-avatar>
+                    <h5 class="FotnStyle">{{p.CategoryName}}</h5>
+                </ion-item>
+                <ion-item no-lines *ngIf="p.CategoryName == 'Props' && ObjGeneralHelper.IsAdmin && p.isActive"
+                    style="margin-left: 5%" (click)="openPage(p)">
+                    <ion-avatar item-start>
+                        <img src="{{p.CategoryImage}}" width="50%">
+                    </ion-avatar>
+                    <h5 class="FotnStyle">{{p.CategoryName}}</h5>
+                </ion-item>
+            </ion-list>
+
+
+            <ion-item no-lines *ngIf="ObjGeneralHelper.IsAdmin" (click)="GotoDashBoard()">
+                <ion-avatar item-start>
+                    <img src="assets/imgs/home.png" width="50%">
+                </ion-avatar>
+                <h2 class="FotnStyle">Dashboard</h2>
+
+            </ion-item>
+
+            <!-- <div style="border-top: 1px solid lightgrey; height: 3px; width: 100%; opacity: 0.5"></div> -->
+        </ion-list>
+
+        <side-menu-content [settings]="sideMenuSettings" [options]="options" (selectOption)="selectOption($event)">
+        </side-menu-content>
+
+
+    </ion-content>
+</ion-menu>
+
+
+
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav #content [root]="rootPage"></ion-nav>
+
+<!-- // "firebase": "^5.2.0", -->

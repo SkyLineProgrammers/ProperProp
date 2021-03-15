@@ -1,0 +1,130 @@
+<!--
+  Generated template for the AddProductPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Add Product</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+
+<ion-content class="backgroundColor" padding>
+  <div>
+    <img style=" width: 70%; margin-top: 10%; margin-left: 15%" src="assets/imgs/ColorLogo.png" />
+  </div>
+
+  <ion-list no-lines>
+
+    <ion-item style="background: none; border-bottom: 2px solid rgb(230, 227, 227);">
+      <ion-label style="text-align: left">Product Name</ion-label>
+      <ion-input [(ngModel)]="ProductName" type="text"></ion-input>
+    </ion-item>
+
+    <!-- <ion-item style="border-radius: 5px; margin-top:5%;  margin-bottom: 5px">
+      <ion-label>
+        <ion-icon style="color: black" name="contact"></ion-icon>
+      </ion-label>
+      <ion-input placeholder="Product Name" [(ngModel)]="ProductName" type="text"></ion-input>
+    </ion-item> -->
+
+    <ion-item style="background: none; border-bottom: 2px solid rgb(230, 227, 227);">
+      <ion-label style="text-align: left">Quantity</ion-label>
+      <ion-input [(ngModel)]="Quantity" type="number"></ion-input>
+    </ion-item>
+
+    <!-- <ion-item style="border-radius: 5px; margin-top:5%;  margin-bottom: 5px">
+      <ion-label>
+        <ion-icon style="color: black" name="add"></ion-icon>
+      </ion-label>
+      <ion-input [(ngModel)]="Quantity" placeholder="Quantity" type="number"></ion-input>
+    </ion-item> -->
+
+    <ion-item style="background: none; border-bottom: 2px solid rgb(230, 227, 227);">
+      <ion-label style="text-align: left">Price</ion-label>
+      <ion-input [(ngModel)]="Price" type="number"></ion-input>
+    </ion-item>
+
+    <!-- <ion-item style="border-radius: 5px; margin-top:5%;  margin-bottom: 5px">
+      <ion-label>
+        <ion-icon style="color:black" name="pricetag"></ion-icon>
+      </ion-label>
+      <ion-input [(ngModel)]="Price" placeholder="Price" type="number"></ion-input>
+    </ion-item> -->
+
+    <ion-item style="background: none; border-bottom: 2px solid rgb(230, 227, 227);">
+      <ion-label style="color: grey; text-align: left">Select Category</ion-label>
+      <!-- <ion-label> <ion-icon style="color: white" name="mail"></ion-icon></ion-label> -->
+      <ion-select class="BoxColor" #newSelect [(ngModel)]="carbrand" (ionChange)="onChange(carbrand);">
+        <ion-option *ngFor="let CatName of CategoryName" [value]="CatName.CategoryName"> {{CatName.CategoryName}}
+        </ion-option>
+      </ion-select>
+    </ion-item>
+
+    <!-- <ion-item style="border-radius: 5px; margin-top:5%;  margin-bottom: 5px">
+      <ion-label style="color:black">Select Category</ion-label>
+      <ion-select #newSelect [(ngModel)]="carbrand" (ionChange)="onChange(carbrand);">
+        <ion-option *ngFor="let CatName of CategoryName" [value]="CatName.CategoryName"> {{CatName.CategoryName}} </ion-option>
+
+      </ion-select>
+    </ion-item> -->
+
+    <ion-item style="background: none; border-bottom: 2px solid rgb(230, 227, 227);">
+      <ion-label style="text-align: left">Description</ion-label>
+      <ion-input [(ngModel)]="Description" type="text"></ion-input>
+    </ion-item>
+
+    <!-- <ion-item style="border-radius: 5px; margin-top:5%;  margin-bottom: 5px">
+      <ion-label>
+        <ion-icon style="color: black" name="text"></ion-icon>
+      </ion-label>
+      <ion-input [(ngModel)]="Description" placeholder="Description" type="text"></ion-input>
+    </ion-item> -->
+
+    <ion-item style="background: none; border-bottom: 2px solid rgb(230, 227, 227);">
+      <ion-checkbox [(ngModel)]="IsActive" checked="true"></ion-checkbox>
+      <ion-label style="color: black; text-align: left">Is Active</ion-label>
+    </ion-item>
+
+    <ion-item style="background: none; border-bottom: 2px solid rgb(230, 227, 227);">
+      <ion-checkbox [(ngModel)]="IsModificationAllowed" checked="true"></ion-checkbox>
+      <ion-label style="color: black; text-align: left">Is Modification allowed?</ion-label>
+    </ion-item>
+    <!-- <ion-item style="border-radius: 5px; margin-top:5%;  margin-bottom: 5px">
+      <ion-checkbox color="dark" [(ngModel)]="IsActive" checked="true"></ion-checkbox>
+      <ion-label style="color: black">Is Active</ion-label>
+    </ion-item> -->
+
+    <div style="margin-left: 15%">
+      <br>
+
+      <input id="file" (change)="onFileChanged($event)" type="file" accept="image/*" #file style="display: none">
+      <img (click)="file.click()" src="assets/imgs/addImage.png" width="20%" />
+
+      <input id="file1" (change)="onFileChanged1($event)" type="file" accept="image/*" #file1 style="display: none">
+      <img (click)="file1.click()" src="assets/imgs/addImage.png" width="20%" />
+
+      <input id="file2" (change)="onFileChanged2($event)" type="file" accept="image/*" #file2 style="display: none">
+      <img (click)="file2.click()" src="assets/imgs/addImage.png" width="20%" />
+
+      <input id="file3" (change)="onFileChanged3($event)" type="file" accept="image/*" #file3 style="display: none">
+      <img (click)="file3.click()" src="assets/imgs/addImage.png" width="20%" />
+    </div>
+
+
+
+
+    <ion-item style="background: none">
+      <button class="BoxColor FotnStyle" ion-button (click)="AddProduct()" full
+        style="height: 40px; font-size: 20px; color: white">Add Product</button>
+    </ion-item>
+  </ion-list>
+
+
+
+</ion-content>

@@ -1,0 +1,83 @@
+<!--
+  Generated template for the FurnitureAddtocartPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title class="FotnStyle">Add to Cart</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<!-- 
+<ion-content  style="background-color: #f7fbfe;">
+  <ion-item style="opacity: 0.8" *ngFor="let loop of PrintAddtoCart">
+    <ion-thumbnail item-start>
+      <img src="{{loop.Image1}}">
+    </ion-thumbnail>
+    <h2>{{loop.ProductName}}</h2>
+    <p>{{loop.Description}}</p>
+    <div item-end>
+      <button (click)="PlusFunction(loop)" ion-button item-end>
+        <ion-icon name="add"></ion-icon>
+      </button>
+      <span item-bottom style="font-size: 20px">{{loop.BucketQuantity}}&nbsp;&nbsp;&nbsp;</span>
+      <button (click)="MinusFunction(loop)" ion-button item-end>
+        <ion-icon name="remove"></ion-icon>
+      </button>
+    </div>
+  </ion-item>
+</ion-content> -->
+
+<ion-content class="backgroundColor">
+
+  <ion-item style="opacity: 0.8" *ngFor="let loop of PrintAddtoCart">
+
+    <ion-thumbnail item-start>
+
+      <img src="{{loop.Image1}}">
+
+    </ion-thumbnail>
+
+
+    <p class="FotnStyle" style="text-align: left">{{loop.ProductName}} <br> <span
+        style="color: #a91e25; font-size:10px ">{{loop.Price}}.00 PKR</span>
+      <br *ngIf="loop.Modification != 0"><span *ngIf="loop.Modification != 0"
+        style="color: #a91e25; font-size:10px ">{{loop.Modification}}</span>
+    </p>
+    <div item-end>
+
+      <button style="background-color: black" (click)="MinusFunction(loop)" ion-button item-end>
+        <ion-icon name="remove"></ion-icon>
+      </button>
+      <span item-bottom
+        style="font-size: 15px; padding: 8px; color: #a91e25 ">{{loop.BucketQuantity}}&nbsp;&nbsp;&nbsp;</span>
+      <button style="background-color: black" (click)="PlusFunction(loop)" ion-button item-end>
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </div>
+  </ion-item>
+</ion-content>
+
+
+<ion-footer>
+  <ion-toolbar transparent>
+    <div style="width: 100%; float: left; clear: both;">
+
+      <h4 class="FotnStyle" style="text-align: center; color: black">Total Amount &nbsp; &nbsp; <b>{{TotalAmount}}.00
+          PKR </b></h4>
+      <button class="FotnStyle" (click)="BookOrder()" ion-button full
+        style="height: 40px; background-color: #a91e25; color: white; border-radius: 5px"> <span
+          style="text-align: center">
+          <ion-icon style="color: white" name="basket"></ion-icon> &nbsp;Book Order
+        </span></button>
+    </div>
+
+    <!-- <div style="width: 50%; float: left;">
+      <button class="FotnStyle" ion-button full style="height: 40px; background-color:  blue"><b>Total:</b>{{TotalAmount}}/=</button>
+    </div> -->
+  </ion-toolbar>
+</ion-footer>

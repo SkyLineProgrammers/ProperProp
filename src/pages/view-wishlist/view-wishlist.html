@@ -1,0 +1,74 @@
+<!--
+  Generated template for the FurnitureAddtocartPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+
+    <div style="width: 70%; float: left">
+      <ion-title class="FotnStyle">Wishlist</ion-title>
+    </div>
+
+    <!-- <div (click)="AddListToCart()" style="width: 28%; float: left; padding: 2">
+      <p
+        style="color: #a91e25; background-color: white; border-radius: 20px; padding: 2px; margin-left: 5px; text-align: center;">
+        Add to Cart</p>
+    </div> -->
+
+
+  </ion-navbar>
+
+
+
+
+</ion-header>
+
+<ion-content class="backgroundColor">
+  <!-- <ion-list style="height: 150px">
+    <ion-item-sliding *ngFor="let loop of PrintAddtoCart ; let i = index">
+
+      <ion-item style="opacity: 0.8">
+
+        <ion-thumbnail item-start>
+
+          <img src="{{loop.Image1}}">
+
+        </ion-thumbnail>
+
+
+        <p class="FotnStyle" style="text-align: left;font-size:15px;">{{loop.ProductName}}
+          <br> {{loop.Price}}</p>
+       
+      </ion-item>
+
+      <ion-item-options>
+        <button ion-button danger (click)="removeItem(i)">
+          <ion-icon name="trash"></ion-icon>
+          Remove
+           <icon trash></icon> Delete
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list> -->
+
+
+  <ion-list>
+    <ion-item *ngFor="let loop of PrintAddtoCart ; let i = index">
+      <ion-avatar (click)="presentModal(loop)" style="border-radius: 0%" item-start>
+        <img style="border-radius: 0%" src="{{loop.Image1}}">
+      </ion-avatar>
+      <ion-avatar item-end>
+        <ion-icon (click)="removeItem(i)" style="font-size: 20px; margin-top: 10px" name="trash"></ion-icon>
+      </ion-avatar>
+      <h2 (click)="presentModal(loop)">{{loop.ProductName}}</h2>
+      <h4 (click)="presentModal(loop)" style="color: #a91e25">{{loop.Price}}.00 PKR</h4>
+    </ion-item>
+  </ion-list>
+
+
+
+
+</ion-content>

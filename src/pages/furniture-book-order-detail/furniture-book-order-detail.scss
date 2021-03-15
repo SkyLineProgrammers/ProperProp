@@ -1,0 +1,11 @@
+page-furniture-book-order-detail {
+.card-header-md {
+    font-size: 1.6rem;
+    color: #222;
+    padding: 2px;
+}
+
+    .toolbar-background {
+     background-color : map-get($colors, themeColor)
+    }
+}

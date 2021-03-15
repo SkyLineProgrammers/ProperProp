@@ -1,0 +1,353 @@
+<!--
+  Generated template for the FurnitureProductDescriptionPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      <span class="FotnStyle">{{ProductName}}</span>
+    </ion-title>
+    <ion-buttons start>
+      <button ion-button (click)="dismiss()">
+        <!-- <span ion-text color="dark" showWhen="ios">Cancel</span> -->
+        <ion-icon name="arrow-back" showWhen="ios"></ion-icon>
+        <ion-icon name="md-close" showWhen="android,windows"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<!-- style="background: url('assets/imgs/back.png');  background-position: center center;
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;
+background-color: #464646;" -->
+
+<ion-content class="backgroundColor" scroll="false">
+
+  <div id="id01" style="padding-top: 40%" class="w3-modal">
+    <div class="w3-modal-content">
+      <div class="w3-container">
+        <br>
+        <span onclick="document.getElementById('id01').style.display='none'" style="font-size: 28px; margin-top: -10px"
+          class="w3-button w3-display-topright">&times;</span>
+        <img (click)="ViewPhoto(Image1)" style="margin-top: 5%" [src]="ShowImage" width="100%" />
+        <br><br>
+      </div>
+    </div>
+  </div>
+
+  <ion-slides pager style="margin-top: -5%; height: 260px">
+
+    <ion-slide>
+      <img (click)="ModalTesting(Image1)" style="margin-top: -0%" [src]="Image1" width="700px" height="260px" />
+
+    </ion-slide>
+
+    <ion-slide>
+      <img style="margin-top: -0%" (click)="ModalTesting(Image2)" [src]="Image2" width="700px" height="260px" />
+    </ion-slide>
+
+    <ion-slide>
+      <img style="margin-top: -0%" (click)="ModalTesting(Image3)" [src]="Image3" width="700px" height="260px" />
+    </ion-slide>
+
+  </ion-slides>
+
+
+  <ion-row style="margin-top:-10px; margin-bottom: 30px;">
+    <ion-col style="padding-left: 35px; padding-right: 25px" col-12>
+
+      <!-- <ion-grid>
+        <ion-row>
+          <ion-col col-5>
+            <b>
+              <h3 style="font-size: 16px" class="FotnStyle">{{ProductName}}</h3>
+            </b>
+            <p style="color: #a91e25; margin-top: -5px; font-size: 16px">{{ProductPrice}}.00 PKR</p>
+          </ion-col>
+          <ion-col col-3>
+          </ion-col>
+          <ion-col col-2>
+          </ion-col>
+
+          <ion-col col-2 (click)="BtnAddtoWishListClick(ProductKey,isWishList,1)">
+            <ion-icon class="Outline" *ngIf="isWishList == 0" style="text-align: center; font-size:20px; margin-top: 50%;" name="heart-outline"></ion-icon>
+            <ion-icon class="IconColor2" *ngIf="isWishList == 1" style="text-align: center; font-size:20px; margin-top: 50%;" name="heart"></ion-icon>
+          </ion-col>
+
+        </ion-row>
+      </ion-grid> -->
+
+
+      <div style="width: 90%; float: left;">
+        <b>
+          <h3 style="font-size: 16px" class="FotnStyle">{{ProductName}}</h3>
+        </b>
+        <p style="color: #a91e25; margin-top: -5px; font-size: 16px">{{ProductPrice}}.00 PKR</p>
+      </div>
+      <div style="width: 10%; float: left" (click)="BtnAddtoWishListClick(ProductKey,isWishList,1)">
+        <ion-icon class="Outline" *ngIf="isWishList == 0" style="text-align: center; font-size:20px; margin-top: 50%;"
+          name="heart-outline"></ion-icon>
+        <ion-icon class="IconColor2" *ngIf="isWishList == 1"
+          style="text-align: center; font-size:20px; margin-top: 50%;" name="heart"></ion-icon>
+      </div>
+
+
+    </ion-col>
+  </ion-row>
+
+  <!-- <div style="padding-left: 25px; padding-right: 25px">
+        <div style="float: left; width: 80%">
+          <b><h3 style="font-size: 16px" class="FotnStyle">{{ProductName}}</h3></b>
+          <p style="color: #a91e25; margin-top: -15px; font-size: 16px">{{ProductPrice}}.00 PKR</p>
+        </div>
+        <div style="float: left; width: 10%; ">
+          &nbsp;&nbsp;&nbsp;
+          <ion-icon class="IconColor" style="text-align: center; font-size:20px; margin-top: 0%;" (click)="AddToWishlist(ProductKey)" name="heart"></ion-icon>
+        </div>
+        <div style="float: left; width: 10%; ">
+          &nbsp;&nbsp;&nbsp;
+          <ion-icon class="IconColor" (click)="BtnShareClick()" style="text-align: center; font-size:20px; margin-top: 60%;  " name="share"></ion-icon>
+        </div>
+      </div> -->
+
+  <ion-row>
+    <ion-col col-12>
+
+      <div style="padding-left: 20px; padding-right: 20px; clear: both;  margin-top: -20px">
+        <p style=" border: solid 1px black; border-radius: 5px; padding: 10px; font-size: 15px" class="FotnStyle">
+          <span style="font-size: 12px; color: #a91e25;">Description</span>
+          <br> {{ProductDetail}}
+        </p>
+      </div>
+
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col col-12>
+      <div style="float: right; padding-left: 20px; padding-right: 20px; margin-top: 0px; margin-bottom:10px">
+        <button style="background-color: black; width: 20px; height: 20px;  margin-top: -4px" (click)="minus(loop)"
+          ion-button item-end>
+          <ion-icon style="font-size: 15px" name="remove"></ion-icon>
+        </button>
+        <span item-bottom
+          style="font-size: 15px; padding: 2px; color: #a91e25; ">&nbsp;&nbsp;{{counter}}&nbsp;&nbsp;</span>
+        <button style="background-color: black; width: 20px; height: 20px;  margin-top: -4px" (click)="plus(loop)"
+          ion-button item-end>
+          <ion-icon name="add"></ion-icon>
+        </button>
+      </div>
+    </ion-col>
+  </ion-row>
+
+  <!-- <ion-card>
+
+
+
+         <ion-card-content>
+          <h3 style="padding:3px; font-size: 20px; margin-top: 5px" class="FotnStyle">
+            <br> {{ProductName}} &nbsp;
+          </h3>
+          <ion-col col-9>
+            <h4 style="padding:3px; font-size: 15px; margin-top: -17px" class="FotnStyle">{{ProductDetail}}
+            </h4>
+          </ion-col>
+        </ion-card-content> 
+
+      </ion-card> -->
+
+
+
+  <!-- <ion-card>
+
+
+        <ion-card-content>
+          <h3 style="padding:3px; font-size: 15px;" class="FotnStyle">Rate Per Day</h3>
+          <h3 style="padding:3px; font-size: 12px;" class="FotnStyle">
+            {{ProductPrice}}.00 PKR
+          </h3>
+        </ion-card-content>
+
+      </ion-card> -->
+
+
+
+
+
+
+  <!-- <ion-row>
+    <ion-col>
+      <div style="width: 50%; float: left; padding-left: 5%">
+        <button (click)="plus()" ion-button color="light" icon-only>
+          <ion-icon name='arrow-up'></ion-icon>
+        </button>
+        <span style="font-size: 20px ;color: black; margin: 10px">{{counter}}</span>
+        <button (click)="minus()" ion-button color="green" icon-only>
+          <ion-icon name='arrow-down'></ion-icon>
+        </button>
+      </div>
+    </ion-col>
+  </ion-row> -->
+
+  <ion-row *ngIf="IsModifidicationAllowed">
+    <!-- <div style="width: 100%;padding: 10px; margin-top: -50px">
+      <input type="text" style="height: 40p; border-radius: 5px" [(ngModel)]="ProductModification" />
+    </div> -->
+
+
+    <ion-card style="margin-top:0px; margin-bottom:15px">
+
+
+      <ion-card-content>
+        <h3 style="padding:3px; font-size: 13px;" class="FotnStyle">
+          Product Modification Details
+        </h3>
+        <ion-item style="background: white; border-radius: 5px; border:1px solid #CC3300">
+          <ion-input placeholder="Insert Your product Modification Details" style="color: grey; font-size: 13px;"
+            [(ngModel)]="ProductModification" type="text"></ion-input>
+        </ion-item>
+      </ion-card-content>
+
+    </ion-card>
+
+
+  </ion-row>
+  <br />
+  <hr>
+
+
+  <div *ngIf="BuutonName == 'ADD TO CART'" style="width: 100%; padding: 10px; margin-top: -80px">
+    <button (click)="AddToCart()" ion-button full style="height: 40px; background-color: #a91e25; border-radius: 5px">
+      &nbsp;
+      <ion-icon style="color: white" name="cart"></ion-icon>
+      <span class="FotnStyle">&nbsp;&nbsp;{{BuutonName}}</span>
+    </button>
+  </div>
+
+  <div *ngIf="BuutonName != 'ADD TO CART'" style="width: 100%; padding: 10px; margin-top: -80px">
+    <ion-grid>
+      <ion-row>
+        <div style="width: 40%; float: left;margin-left: 5%">
+          <button (click)="AddToCart()" ion-button full
+            style="height: 40px; background-color: #a91e25; border-radius: 5px">
+            &nbsp;
+            <ion-icon style="color: white" name="cart"></ion-icon>
+            <b>
+              <span style="font-size: 12px" class="FotnStyle">&nbsp;&nbsp;{{BuutonName}}</span>
+            </b>
+          </button>
+        </div>
+        <div style="width: 40%; float: left;margin-left: 5%;">
+          <button (click)="BookOrder()" ion-button full
+            style="height: 40px; background-color: #a91e25; border-radius: 5px">
+            &nbsp;
+            <ion-icon style="color: white" name="cart"></ion-icon>
+            <b>
+              <span style="font-size: 12px" class="FotnStyle">&nbsp;&nbsp;BOOK ORDER</span>
+            </b>
+          </button>
+        </div>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+
+  <!-- <div style="width: 50%; float: left; clear: both;">
+    <button (click)="AddToCart()" ion-button full style="height: 40px; background-color: red"> &nbsp; <ion-icon style="color: white" name="basket"></ion-icon>&nbsp;&nbsp;Add to Cart</button>
+  </div>
+
+
+  <div style="width: 50%; float: left;">
+    <button ion-button full style="height: 40px;">Place Order !</button>
+  </div> -->
+
+
+
+  <!-- <ion-item>
+      <ion-avatar item-start>
+        <img src="img/marty-avatar.png">
+      </ion-avatar>
+      <h2>Marty McFly</h2>
+      <p>November 5, 1955</p>
+    </ion-item> -->
+
+  <!-- <img src="img/advance-card-bttf.png"> -->
+  <!-- 
+      <ion-row>
+        <ion-col col-12>
+          <h1> Description </h1>
+          <p> {{ProductDetail}} </p>
+        </ion-col>
+
+      </ion-row> -->
+
+
+  <!-- Relative Product -->
+  <!-- <p class="FotnStyle" style=" margin-left: 10px; font-size: 20px; float: left; margin-top: -0px">{{catName}}</p>
+  <p class="FotnStyle" style=" margin-left: 10px; font-size: 12px; float: right; margin-right: 10px; color: #a91e25; margin-top: -0px">View All</p> -->
+  <ion-grid style="margin-top: -0%">
+    <ion-scroll scrollX="true" style="min-height: 220px; float: left;">
+      <!-- <ion-card (click)="presentModal(loop)" *ngFor="let loop of ProductArrayLeft" style="width: 150px !important; background-color:white; height: 235px; margin-left: -1%">
+        <img src="{{loop.Image1}}" width="80%" height="120px" />
+        <div style="padding: 10px">
+          <p class="FotnStyle" style="font-size: 12px; color: black">{{loop.ProductName}}</p>
+          <p class="FotnStyle" style="font-size: 12px; color: black">{{loop.Description}}</p>
+          <p class="FotnStyle" style="font-size: 11px; color: black; margin-top: 5px">{{loop.Price}}/= per Day</p>
+
+          <div style="width: 80%; float: left; margin-top: 20px">
+            <ion-icon class="IconColor" name="basket"></ion-icon>
+          </div>
+          <div style="width: 20%; float: left; margin-top: 20px">
+            <ion-icon class="IconColor" name="share"></ion-icon>
+          </div>
+        </div>
+      </ion-card> -->
+      <ng-container *ngFor="let loop of ProductArrayLeft">
+        <ion-card *ngIf="loop.ID != ProductKey && loop.IsActive == true"
+          style="width: 150px !important; background-color: #ffffff; padding: 0px; box-shadow: 0.5px 0.5px 0.5px lightgray; border:1px solid lightgrey; border-radius:5px; margin-left: -5px; ">
+          <img [src]="loop.Image1" width="100%" height="120px" (click)="presentModal(loop)" />
+          <br>
+          <p class="FotnStyle" (click)="presentModal(loop)"
+            style="font-size: 13px; color: black; padding: 5px; margin-top: -15px">{{loop.ProductName}}</p>
+          <p class="FotnStyle" (click)="presentModal(loop)"
+            style="font-size: 10px; color: #a91e25; margin-top: -12px; padding: 5px">
+            <strong>{{loop.Price}}.00 PKR</strong>
+          </p>
+
+          <div (click)="presentModal(loop)" style="width: 60%; float: left; margin-top: 0px; padding: 5px">
+            <img style="width: 100%; box-shadow: 0px 0px 0px white;" src="assets/imgs/details.png" />
+          </div>
+          <div (click)="presentModal(loop)" style="width: 20%; float: left; margin-top: 0x; padding: 5px">
+            <ion-icon class="IconColor" name="cart"></ion-icon>
+          </div>
+          <div style="width: 20%; float: left; margin-top: 0px; padding: 5px"
+            (click)="BtnAddtoWishListClick(loop.ID,loop.isWishList,0)">
+            <ion-icon class="Outline" *ngIf="loop.isWishList == 0" [id]="loop.ID+0" style="text-align: center"
+              name="heart-outline"></ion-icon>
+            <ion-icon class="IconColor2" *ngIf="loop.isWishList == 1" [id]="loop.ID+1" style="text-align: center"
+              name="heart"></ion-icon>
+
+          </div>
+        </ion-card>
+      </ng-container>
+
+    </ion-scroll>
+  </ion-grid>
+
+
+</ion-content>
+
+
+<!-- <ion-footer>
+  <ion-toolbar>
+
+
+    <div style="width: 50%; float: left;">
+      <button (click)="GotoOrder()" ion-button full style="height: 40px;">Place Order !</button>
+    </div>
+  </ion-toolbar>
+</ion-footer> -->

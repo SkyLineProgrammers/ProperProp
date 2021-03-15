@@ -1,0 +1,92 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+.sc-ion-back-button-ios-h {
+    color: white !important; 
+  }
+  .back-button .disable-hover .bar-button .bar-button-ios .back-button-ios .bar-button-default .bar-button-default-ios .show-back-button
+{
+    color:white !important;
+}
+.bar-button-default-ios{
+    color:white !important;
+}
+.label {
+    display: inline;
+    //padding: .2em .6em .3em;
+    //font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    color: black!important;
+    text-align: left !important;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25em;
+}
+.item-ios.item-block .item-inner{
+    border-bottom: none;
+}
+.toolbar-background{
+    background-color : map-get($colors, themeColor)
+}
+ion-title{
+    color:white !important;
+}
+ion-navbar{
+    color:white !important
+}
+.header .header-ios .toolbar .toolbar-ios{
+    background-color: #008CFF;    
+}
+.FotnStyle {
+    // font-family: 'Comfortaa', cursive;
+    font-family: 'Istok WebIconColor', sans-serif;
+    
+}
+
+
+.SKfontStyle {
+        font-family: 'Comfortaa', cursive;
+ }
+.backgroundColor {
+    background-color : map-get($colors, BackgroundColor)
+}
+
+// .tabbar-background {
+            
+//     background-color : map-get($colors, themeColor)
+            
+//     }
+
+    .IconColor {
+        color: map-get($colors, themeColor);        
+    }
+
+    .Outline {
+        color: black
+    }
+
+    .IconColor2 {
+        color: map-get($colors, themeColor);                
+    }
+
+    .BoxColor {
+        background-color: map-get($colors, themeColor);        
+    }
+
+.toolbar-title.toolbar-title-md, 
+.toolbar-title.toolbar-title-ios, 
+.toolbar-title.toolbar-title-wp { color: map-get($colors, light); }

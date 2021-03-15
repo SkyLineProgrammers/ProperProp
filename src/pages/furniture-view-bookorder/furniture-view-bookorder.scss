@@ -1,0 +1,15 @@
+page-furniture-view-bookorder {
+         .toolbar-background {
+         background-color : map-get($colors, themeColor)
+      }
+
+      .SameButtonForAlert{
+            color: 'primary';
+            font-weight: 'normal' !important;
+            button{
+                  color:'primary';
+                  font-weight: 'normal' !important;
+              }
+      }
+
+}

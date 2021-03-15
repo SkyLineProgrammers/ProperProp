@@ -1,0 +1,64 @@
+page-furniture-sidemenu-category {
+   
+/* DEMO-SPECIFIC STYLES */
+.typewriter h1 {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 2%;
+    padding: 10px;
+  color: #fff;
+  font-family: monospace;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid #7f7fff; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { background-image: linear-gradient(to bottom right ,red, black );}
+  50% { border-color: #f4e5d2 }
+}
+
+.card-ios {
+    margin: 6px;
+    border-radius: 2px;
+    width: calc(100% - 24px);
+    font-size: 1.4rem;
+    background: #fff;
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+ 
+.card-md {
+    margin: 6px;
+    border-radius: 2px;
+    width: calc(100% - 20px);
+    font-size: 1.4rem;
+    background: #fff;
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    
+}
+
+// .card-content-md {
+        // padding: 0;
+        // font-size: 1.4rem;
+        // line-height: 1.5;
+    // }
+    .toolbar-background {
+        background-color : map-get($colors, themeColor)
+    }
+}
+

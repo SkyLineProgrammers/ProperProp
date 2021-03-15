@@ -1,0 +1,178 @@
+page-furniture-product {
+
+    .WishListColor{
+        color:white;
+    }
+
+    .WishListColor2{
+        color:#a91e25;
+    }
+
+
+ .class_used_to_set_icon {
+        // I'd suggest to have the icon in src/assets (eg ../assets/icon/favicon.ico)
+        background-image: url("http://icons.iconarchive.com/icons/martz90/circle/512/camera-icon.png") !important;
+        // to properly position the icon:
+        background-repeat: no-repeat !important;
+        background-position: 10px 10px !important;
+        // to indent the text to the right of the icon:
+        padding-left: 70px !important;
+      }
+
+      .scroll-zoom-wrapper {
+        white-space: nowrap;
+     }
+    
+      ion-card {
+          display: inline-block;
+          background: #006400;
+      }
+    
+
+
+
+.card-ios {
+    margin: 2px;
+    border-radius: 2px;
+    width: calc(100% - 24px);
+    font-size: 1.4rem;
+    background: transparent;
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+      ion-scroll {
+          height: auto;
+    
+          .scroll-content {
+            //   padding: 0px !important;   
+          }
+      }
+
+ion-card div img {
+     box-shadow: 1px 1px 5px black; 
+     border-radius: 3px
+}
+
+
+
+.searchbar-ios .searchbar-input {
+    width: 90%;
+    margin-left: 5%;
+    padding: 6px 65px;
+    border-radius: 20px;
+    background-position: left 8px center;
+    height: 35px;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 3rem;
+    color: #141414;
+    background-color: #fff;
+    -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+.toolbar .searchbar-ios .searchbar-input {
+    background: rgb(255, 255, 255);
+}
+
+.searchbar-ios .searchbar-search-icon {
+    left: 20px;
+    top: 10px;
+    // background-image: url(data:image/svg+xml;charset=utf-8,<svg%20xmlns='http://www.w3.org/2000/svg'%…roke-miterlimit='10'%20x1='12.6'%20y1='12.6'%20x2='8.2'%20y2='8.2'/></svg>);
+    margin-left: calc(50% - 60px);
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background-repeat: no-repeat;
+    background-size: 13px;
+}
+
+.searchbar-md .searchbar-search-icon {
+    left: 35px;
+    top: 10px;
+    // background-image: url(data:image/svg+xml;charset=utf-8,<svg%20xmlns='http://www.w3.org/2000/svg'%…roke-miterlimit='10'%20x1='12.6'%20y1='12.6'%20x2='8.2'%20y2='8.2'/></svg>);
+    // margin-left: calc(50% - 60px);
+    // position: absolute;
+    width: 25px;
+    height: 25px;
+    background-repeat: no-repeat;
+    // background-size: 13px;
+}
+
+
+
+
+.searchbar-animated .searchbar-ios-cancel {
+
+    color: white;   
+
+}
+
+.searchbar-md .searchbar-input {
+    width: 95%;
+    margin-left: 2.5%;
+    padding: 6px 65px;
+    border-radius: 20px;
+    background-position: left 8px center;
+    height: 35px;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 3rem;
+    color: #141414;
+    background-color: #fff;
+    -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+    .card-md {
+        margin: 3px;
+        // border-radius: 5px;
+        width: calc(100%);
+        padding: 7px;
+        font-size: 1.4rem;
+        background:none;
+        -webkit-box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.14), 0 0px 0px 0px rgba(0, 0, 0, 0.2), 0 0px 0px 0 rgba(0, 0, 0, 0.12);
+        box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.14), 0 0px 0px 0px rgba(0, 0, 0, 0.2), 0 0px 0px 0 rgba(0, 0, 0, 0.12);
+    }
+
+/* DEMO-SPECIFIC STYLES */
+.typewriter h1 {
+    margin-bottom: 2%;
+    padding: 10px;
+  color: #fff;
+  font-family: monospace;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid #b9b3aa; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { background-image: linear-gradient(to bottom right,#b9b3aa , #f4e5d2 );}
+  50% { border-color: #f4e5d2 }
+}
+
+    .card-content-md {
+        padding: 0;
+        font-size: 1.4rem;
+        line-height: 1.5;
+    }
+    .toolbar-background {
+        background-color: map-get($colors, themeColor);
+    }
+    .BoxColor {
+        background-color: map-get($colors, themeColor);        
+    }
+}

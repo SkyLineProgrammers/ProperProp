@@ -1,0 +1,98 @@
+<!--
+  Generated template for the FurnitureBookorderPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Booking Order</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="backgroundColor">
+
+
+  <div>
+    <img style=" width: 70%; margin-top: 10%; margin-left: 15%" src="assets/imgs/ColorLogo.png" />
+  </div>
+
+  <!-- <ion-item style="border-radius: 5px; margin-top:5%; background: #c9bdae;  margin-bottom: 5px">
+    <ion-label>Name</ion-label>
+    <ion-input style="color: white" [(ngModel)]="Name" type="text"></ion-input>
+  </ion-item> -->
+
+  <ion-item style="background: none; border-bottom: 2px solid rgb(230, 227, 227);">
+    <ion-label style="text-align: left">Customer Name</ion-label>
+    <ion-input style="color: grey" [(ngModel)]="Name" type="text"></ion-input>
+  </ion-item>
+
+  <!-- <ion-item style="border-radius: 5px; margin-top:5%; background: #c9bdae;  margin-bottom: 5px">
+    <ion-label>Phone Number</ion-label>
+    <ion-input style="color: white" [(ngModel)]="Number" type="number"></ion-input>
+  </ion-item> -->
+
+
+  <ion-item style="background: none; border-bottom: 2px solid rgb(230, 227, 227);">
+    <ion-label style="text-align: left">Customer Number</ion-label>
+    <ion-input style="color: grey" [(ngModel)]="Number" type="number"></ion-input>
+  </ion-item>
+
+
+  <!-- <ion-item style="border-radius: 5px; margin-top:5%; background: #c9bdae;  margin-bottom: 5px">
+    <ion-label>City</ion-label>
+    <ion-input style="color: white" [(ngModel)]="City" type="text"></ion-input>
+  </ion-item> -->
+
+  <ion-item style="background: none; border-bottom: 2px solid rgb(230, 227, 227);">
+    <ion-label style="text-align: left">City</ion-label>
+    <ion-input style="color: grey" [(ngModel)]="City" type="text"></ion-input>
+  </ion-item>
+
+  <!-- <ion-item style="border-radius: 5px; margin-top:5%; background: #c9bdae;  margin-bottom: 5px">
+    <ion-label>Postal Code</ion-label>
+    <ion-input style="color: white" [(ngModel)]="PostalCode" type="number"></ion-input>
+  </ion-item> -->
+
+  <ion-item style="background: none; border-bottom: 2px solid rgb(230, 227, 227);">
+    <ion-label style="text-align: left">Postal Code</ion-label>
+    <ion-input style="color: grey" [(ngModel)]="PostalCode" type="number"></ion-input>
+  </ion-item>
+
+  <!-- <ion-item style="border-radius: 5px; margin-top:5%; background: #c9bdae;  margin-bottom: 5px">
+    <ion-label>Adress</ion-label>
+    <ion-input style="color: white" [(ngModel)]="Adress" type="text"></ion-input>
+  </ion-item> -->
+
+  <ion-item style="background: none; border-bottom: 2px solid rgb(230, 227, 227);">
+    <ion-label style="text-align: left">Adress</ion-label>
+    <ion-input style="color: grey" [(ngModel)]="Adress" type="text"></ion-input>
+  </ion-item>
+
+  <ion-item style="background: none; border-bottom: 2px solid rgb(230, 227, 227);">
+    <ion-label style="text-align: left">From Date</ion-label>
+    <ion-input style="color: grey" [(ngModel)]="FromDate" type="date"></ion-input>
+  </ion-item>
+
+  <ion-item style="background: none; border-bottom: 2px solid rgb(230, 227, 227);">
+    <ion-label style="text-align: left">To Date</ion-label>
+    <ion-input (change)="CalNetAmount($event)" style="color: grey" [(ngModel)]="ToDate" type="date"></ion-input>
+  </ion-item>
+
+  <ion-item style="border-radius: 5px; margin-top:5%;  margin-bottom: 5px;">
+    <ion-label>
+      <p style="color: black">Net Amount &nbsp;&nbsp;{{ShowNetAmount}}&nbsp;/=</p>
+    </ion-label>
+    <!-- <ion-input type="number"></ion-input> -->
+  </ion-item>
+  <ion-item style="background: none">
+    <h2 (click)="GotoAddtoCart()" class="BoxColor"
+      style=" opacity: 0.9; border-radius: 10px; padding: 10px; color: white">View Add to Cart Bucket</h2>
+  </ion-item>
+
+  <br>
+  <button (click)="AddOrder()" ion-button full style="border-radius: 10px">Submit Orders</button>
+</ion-content>

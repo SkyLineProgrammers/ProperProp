@@ -1,0 +1,303 @@
+<!--
+  Generated template for the FurnitureInvoicePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Generate Invoice</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding class="backgroundColor">
+
+
+  <div *ngIf="isForm">
+
+
+    <div>
+      <!-- <img style=" width: 70%; margin-top: 10%; margin-left: 15%" src="{{DesignLogo}}" /> -->
+      <img style=" width: 70%; margin-top: 15%; margin-top: 10%; ; margin-left: 15%" src="assets/imgs/ColorLogo.png" />
+
+    </div>
+
+    <hr>
+
+    <!-- <ion-grid>
+      <ion-row>
+        <ion-col col-1></ion-col>
+        <ion-col col-7>
+          <h4 class="FotnStyle">Order ID :</h4>
+          <h4 class="FotnStyle">Customer Name :</h4>
+          <h4 class="FotnStyle">Order Date :</h4>
+          <h4 class="FotnStyle">Net Amount :</h4>
+
+        </ion-col>
+        <ion-col col-4>
+          <h4 class="FotnStyle">{{ShowOrderInfo[0].OrderID}}</h4>
+          <h4 class="FotnStyle">{{ShowOrderInfo[0].Name}}</h4>
+          <h4 class="FotnStyle">{{ShowOrderInfo[0].OrderDate}}</h4>
+          <h4 class="FotnStyle">{{ShowOrderInfo[0].NetAmount}}</h4>
+
+        </ion-col>
+      </ion-row>
+    </ion-grid> -->
+
+
+    <div>
+      <div style="width: 10%; float: left"></div>
+      <div style="width: 60%; float: left">
+        <h4 class="FotnStyle">Order ID :</h4>
+        <h4 class="FotnStyle">Customer Name :</h4>
+        <h4 class="FotnStyle">Order Date :</h4>
+        <h4 class="FotnStyle">Net Amount :</h4>
+      </div>
+      <div style="width: 30%; float: left">
+        <h4 class="FotnStyle">{{ShowOrderInfo[0].OrderID}}</h4>
+        <h4 class="FotnStyle">{{ShowOrderInfo[0].Name}}</h4>
+        <h4 class="FotnStyle">{{ShowOrderInfo[0].OrderDate}}</h4>
+        <h4 class="FotnStyle">{{ShowOrderInfo[0].NetAmount}}</h4>
+      </div>
+    </div>
+
+
+    <hr>
+
+
+    <ion-item style="background: none; border-bottom: 2px solid rgb(230, 227, 227);">
+      <ion-label style="text-align: left">Discount Amount</ion-label>
+      <ion-input style="color: grey" [(ngModel)]="Discount" type="text"></ion-input>
+    </ion-item>
+    <ion-item style="background: none; border-bottom: 2px solid rgb(230, 227, 227);">
+      <ion-label style="text-align: left">Delivery Charges</ion-label>
+      <ion-input style="color: grey" [(ngModel)]="DeliveryAmount" type="text"></ion-input>
+    </ion-item>
+    <ion-item style="background: none; border-bottom: 2px solid rgb(230, 227, 227);">
+      <ion-label style="text-align: left">Modification Charges</ion-label>
+      <ion-input style="color: grey" [(ngModel)]="ModificationCharges" type="text"></ion-input>
+    </ion-item>
+
+
+    <br>
+    <button (click)="GenerateInvoice()" ion-button full style="border-radius: 10px">Generate Invoice</button>
+
+  </div>
+
+
+  <div *ngIf="isprint">
+    <div style="display: block; margin-left: auto; margin-right: auto; width: 70%;">
+      <img src="assets/imgs/123.png" />
+    </div>
+    <div style="margin-top: 5%">
+      <hr>
+      <div style="width: 70%; float: left">
+        <p style="font-size: 15px" style="font-size: 15px" class="SKfontStyle">Order #
+          :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <b>
+            <span>{{this.ShowOrderInfo[0].OrderID}}</span>
+          </b>
+        </p>
+        <p style="font-size: 15px" class="SKfontStyle">Client Name :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <b>
+            <span>{{this.ShowOrderInfo[0].Name}}</span>
+          </b>
+        </p>
+        <p style="font-size: 15px" class="SKfontStyle">Departure Date :&nbsp;&nbsp;
+          <b>
+            <span>122223</span>
+          </b>
+        </p>
+        <p style="font-size: 15px" class="SKfontStyle">Arival Date
+          :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <b>
+            <span>123456</span>
+          </b>
+        </p>
+      </div>
+
+      <div style="width: 30%; float: left">
+
+        <p style="font-size: 15px" class="SKfontStyle">Date :
+          <b>
+            <span>534535</span>
+          </b>
+        </p>
+      </div>
+
+      <hr style="clear: both">
+    </div>
+
+    <table cellpadding="9px" border="1" cellspacing="0" width="100%">
+      <tr>
+        <th
+          style="  font-family: 'Comfortaa', cursive;; font-family: 'Comfortaa', cursive; font-family: 'Comfortaa', cursive; font-family: 'Comfortaa', cursive; font-family: 'Comfortaa', cursive;">
+          Description</th>
+        <th style="  font-family: 'Comfortaa', cursive;">QTY</th>
+        <th style="  font-family: 'Comfortaa', cursive;">Rate</th>
+        <th style="  font-family: 'Comfortaa', cursive;">Amount</th>
+        <th style="  font-family: 'Comfortaa', cursive;">Pictures</th>
+      </tr>
+      <tr>
+        <td style="text-align: center; font-family: 'Comfortaa', cursive;">Propduct One</td>
+        <td style="text-align: center; font-family: 'Comfortaa', cursive;">5</td>
+        <td style="text-align: center; font-family: 'Comfortaa', cursive;">15000/=</td>
+        <td style="text-align: center; font-family: 'Comfortaa', cursive;">75000/=</td>
+        <td style="text-align: center; font-family: 'Comfortaa', cursive;">
+          <img src="https://images-na.ssl-images-amazon.com/images/I/41JjoGcG36L._SL500_.jpg" width="70px"
+            height="70px" />
+        </td>
+      </tr>
+
+      <tr>
+        <td style="text-align: center; font-family: 'Comfortaa', cursive;">Propduct One</td>
+        <td style="text-align: center; font-family: 'Comfortaa', cursive;">5</td>
+        <td style="text-align: center; font-family: 'Comfortaa', cursive;">15000/=</td>
+        <td style="text-align: center; font-family: 'Comfortaa', cursive;">75000/=</td>
+        <td style="text-align: center; font-family: 'Comfortaa', cursive;">
+          <img src="https://images-na.ssl-images-amazon.com/images/I/41JjoGcG36L._SL500_.jpg" width="70px"
+            height="70px" />
+        </td>
+      </tr>
+
+      <tr>
+        <td style="text-align: center; font-family: 'Comfortaa', cursive;">Propduct One</td>
+        <td style="text-align: center; font-family: 'Comfortaa', cursive;">5</td>
+        <td style="text-align: center; font-family: 'Comfortaa', cursive;">15000/=</td>
+        <td style="text-align: center; font-family: 'Comfortaa', cursive;">75000/=</td>
+        <td style="text-align: center; font-family: 'Comfortaa', cursive;">
+          <img src="https://images-na.ssl-images-amazon.com/images/I/41JjoGcG36L._SL500_.jpg" width="70px"
+            height="70px" />
+        </td>
+      </tr>
+      <tr>
+        <td style="text-align: center; font-family: 'Comfortaa', cursive;">Propduct One</td>
+        <td style="text-align: center; font-family: 'Comfortaa', cursive;">5</td>
+        <td style="text-align: center; font-family: 'Comfortaa', cursive;">15000/=</td>
+        <td style="text-align: center; font-family: 'Comfortaa', cursive;">75000/=</td>
+        <td style="text-align: center; font-family: 'Comfortaa', cursive;">
+          <img src="https://images-na.ssl-images-amazon.com/images/I/41JjoGcG36L._SL500_.jpg" width="70px"
+            height="70px" />
+        </td>
+      </tr>
+
+      <tr>
+        <td style="text-align: center; font-family: 'Comfortaa', cursive;">Propduct One</td>
+        <td style="text-align: center; font-family: 'Comfortaa', cursive;">5</td>
+        <td style="text-align: center; font-family: 'Comfortaa', cursive;">15000/=</td>
+        <td style="text-align: center; font-family: 'Comfortaa', cursive;">75000/=</td>
+        <td style="text-align: center; font-family: 'Comfortaa', cursive;">
+          <img src="https://images-na.ssl-images-amazon.com/images/I/41JjoGcG36L._SL500_.jpg" width="70px"
+            height="70px" />
+        </td>
+      </tr>
+
+      <tr>
+        <td style="text-align: center; font-family: 'Comfortaa', cursive;">Propduct One</td>
+        <td style="text-align: center; font-family: 'Comfortaa', cursive;">5</td>
+        <td style="text-align: center; font-family: 'Comfortaa', cursive;">15000/=</td>
+        <td style="text-align: center; font-family: 'Comfortaa', cursive;">75000/=</td>
+        <td style="text-align: center; font-family: 'Comfortaa', cursive;">
+          <img src="https://images-na.ssl-images-amazon.com/images/I/41JjoGcG36L._SL500_.jpg" width="70px"
+            height="70px" />
+        </td>
+      </tr>
+      <tr>
+        <td style="text-align: center; font-family: 'Comfortaa', cursive;">Propduct One</td>
+        <td style="text-align: center; font-family: 'Comfortaa', cursive;">5</td>
+        <td style="text-align: center; font-family: 'Comfortaa', cursive;">15000/=</td>
+        <td style="text-align: center; font-family: 'Comfortaa', cursive;">75000/=</td>
+        <td style="text-align: center; font-family: 'Comfortaa', cursive;">
+          <img src="https://images-na.ssl-images-amazon.com/images/I/41JjoGcG36L._SL500_.jpg" width="70px"
+            height="70px" />
+        </td>
+      </tr>
+
+      <tr>
+        <td style="text-align: center; font-family: 'Comfortaa', cursive;">Propduct One</td>
+        <td style="text-align: center; font-family: 'Comfortaa', cursive;">5</td>
+        <td style="text-align: center; font-family: 'Comfortaa', cursive;">15000/=</td>
+        <td style="text-align: center; font-family: 'Comfortaa', cursive;">75000/=</td>
+        <td style="text-align: center; font-family: 'Comfortaa', cursive;">
+          <img src="https://images-na.ssl-images-amazon.com/images/I/41JjoGcG36L._SL500_.jpg" width="70px"
+            height="70px" />
+        </td>
+      </tr>
+
+      <tr>
+        <td style="text-align: center; font-family: 'Comfortaa', cursive;">Propduct One</td>
+        <td style="text-align: center; font-family: 'Comfortaa', cursive;">5</td>
+        <td style="text-align: center; font-family: 'Comfortaa', cursive;">15000/=</td>
+        <td style="text-align: center; font-family: 'Comfortaa', cursive;">75000/=</td>
+        <td style="text-align: center; font-family: 'Comfortaa', cursive;">
+          <img src="https://images-na.ssl-images-amazon.com/images/I/41JjoGcG36L._SL500_.jpg" width="70px"
+            height="70px" />
+        </td>
+      </tr>
+
+    </table>
+
+    <div>
+      <hr>
+      <div style="width: 5%; float: left">
+        <br>
+      </div>
+
+      <div style="width: 85%; float: left">
+
+        <div style="width: 45%; float: left">
+
+          <p style="font-size: 15px" style="font-size: 15px" class="SKfontStyle">Sub Total
+            :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <b>
+              <span>15,000/=</span>
+            </b>
+          </p>
+          <p style="font-size: 15px" class="SKfontStyle">Delivery Charges
+            :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <b>
+              <span>500/=</span>
+            </b>
+          </p>
+          <p style="font-size: 15px" class="SKfontStyle">Modification Charges :&nbsp;&nbsp;
+            <b>
+              <span>15000/=</span>
+            </b>
+          </p>
+          <p style="font-size: 15px" class="SKfontStyle">Discount
+            Amount:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <b>
+              <span>1000/=</span>
+            </b>
+          </p>
+          <p style="font-size: 15px" class="SKfontStyle">Net Amount
+            :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <b>
+              <span>29,500/=</span>
+            </b>
+          </p>
+
+        </div>
+
+        <div style="width: 55%; float: left">
+          <p
+            style=" font-family: 'Comfortaa', cursive; border: solid 2px black; font-size: 12px; padding: 5px; margin-top: 10%">
+            <b>Note:</b>
+            <br> 100% payment will be requried perior renting .
+            <br> 100% should be paid on major damged items .
+            <br> Repairing cost should be paid for repairable damaged items .
+          </p>
+
+        </div>
+      </div>
+
+      <hr style="clear: both">
+    </div>
+
+  </div>
+
+
+
+</ion-content>

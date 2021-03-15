@@ -1,0 +1,26 @@
+page-furniture-product-description {
+
+
+      .toolbar-background {
+         background-color : map-get($colors, themeColor)
+      }
+
+
+      .scroll-zoom-wrapper {
+        white-space: nowrap;
+     }
+    
+      ion-card {
+          display: inline-block;
+          background: #006400;
+      }
+    
+      ion-scroll {
+          height: auto;
+      }
+
+
+
+
+      
+}

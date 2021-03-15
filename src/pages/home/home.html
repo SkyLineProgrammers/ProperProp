@@ -1,0 +1,15 @@
+<ion-header>
+
+</ion-header>
+
+
+<ion-content>
+
+  <ion-tabs selectedIndex="{{tabToShow}}" style="padding: 0px" color="NavColor">
+    <ion-tab style="color: #a91e25" [root]="home" tabTitle="Home" tabIcon="home"></ion-tab>
+    <ion-tab [root]="Addtocart" style="color: #a91e25" tabTitle="Add To Cart" tabIcon="cart"></ion-tab>
+    <ion-tab [root]="WishList" tabTitle="Wish List" style="color: #a91e25" tabIcon="heart"></ion-tab>
+    <ion-tab (ionSelect)="GotoOrderPage()" tabTitle="My Orders" style="color: #a91e25" tabIcon="reorder"></ion-tab>
+  </ion-tabs>
+
+</ion-content>

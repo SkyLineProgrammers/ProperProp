@@ -1,0 +1,21 @@
+page-furniture-login {
+
+    input {
+        color: grey
+    }
+
+    .text-input::-moz-placeholder {
+        color: grey;
+      }
+      
+      .text-input:-ms-input-placeholder {
+        color: grey;
+      }
+      
+      .text-input::-webkit-input-placeholder {
+        // text-indent: 0;
+        color: grey;
+      }
+
+
+}

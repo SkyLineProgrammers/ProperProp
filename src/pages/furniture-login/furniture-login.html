@@ -1,0 +1,79 @@
+<!--
+  Generated template for the FurnitureLoginPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title class="FotnStyle">Login</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding class="backgroundColor">
+
+  <div>
+    <img style=" width: 70%; margin-top: 40%; margin-left: 15%" src="assets/imgs/ColorLogo.png" />
+  </div>
+
+  <!-- 
+  <div>
+    <img style=" width: 50%; margin-top: 5%" src="assets/imgs/welcometext.png" />
+  </div> -->
+
+  <ion-list no-lines>
+
+
+    <ion-item style="background: none; border-bottom: 2px solid rgb(230, 227, 227);">
+      <ion-label style="text-align: left">Username</ion-label>
+      <ion-input style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif"
+        [(ngModel)]="UserName" type="text"></ion-input>
+    </ion-item>
+
+    <!-- <ion-item style="border-radius: 5px; margin-top:5%; background: #c9bdae;  margin-bottom: 5px">
+      <ion-label>
+        <ion-icon style="color: white" name="contact"></ion-icon>
+      </ion-label>
+    </ion-item> -->
+
+
+    <ion-item style="background: none; border-bottom: 2px solid rgb(230, 227, 227);">
+      <ion-label style="text-align: left">Password</ion-label>
+      <ion-input [(ngModel)]="Password" type="password"></ion-input>
+    </ion-item>
+
+    <!-- <ion-item style="border-radius: 5px; margin-top:5%; background: #c9bdae;;  margin-bottom: 5px">
+      <ion-label>
+        <ion-icon style="color: white" name="key"></ion-icon>
+      </ion-label>
+    </ion-item> -->
+
+    <p (click)="SignUp()" style="text-align: center; color: lightgray; margin-top: 5px; font-size: 12px">Don't have an
+      account ? <span style="color: black; font-size: 15px">SignUp</span></p>
+
+    <ion-item style="background: none">
+      <button class="BoxColor" (click)="LogIn()" ion-button full style="height: 40px">Login</button>
+      <!-- <button class="BoxColor" (click)="share()" ion-button full style="height: 40px">TEST</button> -->
+    </ion-item>
+
+  </ion-list>
+
+
+  <!-- <div>
+    <p (click)="SignUp()" style="text-align: center; color: aqua; font-size: 20px; font-style: oblique;">
+      <u>Sing Up Now</u>
+    </p>
+  </div> -->
+
+
+
+  <!-- <ion-tabs>
+  <ion-tab [root]="home" tabTitle="Home" tabIcon="book"></ion-tab>
+  <ion-tab [root]="testAddtoCart" tabTitle="Add To Cart" tabIcon="star"></ion-tab>
+  <ion-tab [root]="testAddtoCart2" tabTitle="Add To Cart2" tabIcon="book"></ion-tab>
+  <ion-tab [root]="testAddtoCart3" tabTitle="Add To Cart3" tabIcon="star"></ion-tab>
+</ion-tabs> -->
+
+
+</ion-content>

@@ -1,0 +1,10 @@
+page-furniture-bookorder {
+//  .toolbar-background {
+//               background-color: #e9dfd3;
+//           }
+.toolbar-background {
+            
+    background-color : map-get($colors, themeColor)
+            
+    }
+}

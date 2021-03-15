@@ -1,0 +1,48 @@
+<!--
+  Generated template for the FurnitureCatViewPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+   
+   
+    <ion-title>
+      <div style="width: 80%; float: left">Category</div>
+      <div style="width: 20%; float: right; text-align: right">
+        <!-- <ion-icon name="heart"></ion-icon>&nbsp;&nbsp;&nbsp; -->
+        <ion-icon  (click)="gotoAddtoCart()" name="basket"></ion-icon>        
+      </div>
+    </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+
+<ion-content  class="card-background-page backgroundColor">
+
+  <ion-card (click)="navigateToProduct(loop.CategoryName , loop.CategoryImage)" *ngFor="let loop of AllcatArray">
+    <img src="{{loop.CategoryImage}}" />
+    <div class="card-title">{{loop.CategoryName}}</div>
+    <div class="card-subtitle">Best Furniture in the world</div>
+  </ion-card>
+
+
+
+<!-- <ion-card (click)="navigateToProduct(loop.CatID)" *ngFor="let loop of AllcatArray">
+   <img src="{{loop.CategoryImage}}">
+
+  <ion-card-content style="background-color:#a28c74; padding: 5px">
+    <h1 style="text-align: left; color: white">{{loop.CategoryName}}</h1>
+    <p  style="text-align: left; color: white">Best Furniture in the world</p>
+  </ion-card-content>
+
+ 
+</ion-card> -->
+
+
+
+</ion-content>

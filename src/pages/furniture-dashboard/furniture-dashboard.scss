@@ -1,0 +1,92 @@
+page-furniture-dashboard {
+
+        img {
+            padding: 5px;
+        }
+
+      .toolbar-background {
+         background-color : map-get($colors, themeColor)
+      }
+
+ .class_used_to_set_icon {
+        // I'd suggest to have the icon in src/assets (eg ../assets/icon/favicon.ico)
+        background-image: url("http://icons.iconarchive.com/icons/martz90/circle/512/camera-icon.png") !important;
+        // to properly position the icon:
+        background-repeat: no-repeat !important;
+        background-position: 10px 10px !important;
+        // to indent the text to the right of the icon:
+        padding-left: 70px !important;
+      }
+
+      .scroll-zoom-wrapper {
+        white-space: nowrap;
+     }
+    
+      ion-card {
+          display: inline-block;
+          background: #006400;
+      }
+    
+      ion-scroll {
+          height: auto;
+    
+          .scroll-content {
+            //   padding: 0px !important;   
+          }
+      }
+
+ion-card div img {
+     box-shadow: 1px 1px 4px #d7dbde; 
+     border-radius: 3px
+}
+
+
+    .card-md {
+        margin: 3px;
+        // border-radius: 5px;
+        width: calc(100%);
+        padding: 7px;
+        font-size: 1.4rem;
+        background:none;
+        -webkit-box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.14), 0 0px 0px 0px rgba(0, 0, 0, 0.2), 0 0px 0px 0 rgba(0, 0, 0, 0.12);
+        box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.14), 0 0px 0px 0px rgba(0, 0, 0, 0.2), 0 0px 0px 0 rgba(0, 0, 0, 0.12);
+    }
+
+/* DEMO-SPECIFIC STYLES */
+.typewriter h1 {
+    margin-bottom: 2%;
+    padding: 10px;
+  color: #fff;
+  font-family: monospace;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid #b9b3aa; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { background-image: linear-gradient(to bottom right,#b9b3aa , #f4e5d2 );}
+  50% { border-color: #f4e5d2 }
+}
+
+    .card-content-md {
+        padding: 0;
+        font-size: 1.4rem;
+        line-height: 1.5;
+    }
+    // .toolbar-background {
+    //     background-color: #008CFF;
+    // }
+
+}
