@@ -6,7 +6,7 @@ import { FurnitureCatViewPage } from '../pages/furniture-cat-view/furniture-cat-
 import { FurnitureLoginPage } from '../pages/furniture-login/furniture-login';
 import { FurnitureSignUpPage } from '../pages/furniture-sign-up/furniture-sign-up';
 import { FurnitureWelcomePage } from '../pages/furniture-welcome/furniture-welcome';
-
+// Happy commit for testing GITHUB
 import { LoginPage } from '../pages/login/login';
 import { AddProductPage } from '../pages/add-product/add-product';
 import { AddCategoryPage } from '../pages/add-category/add-category';
